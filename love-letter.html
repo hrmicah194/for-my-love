@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>To My Panget 💌 — From Micah</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg1: #ffd6c2;   /* soft peach */
+      --bg2: #ff9aa2;   /* rose */
+      --accent: #ff6b81;
+      --card: rgba(255,255,255,0.12);
+      --glass: rgba(255,255,255,0.08);
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;font-family:Poppins,system-ui,Segoe UI,Roboto,Arial;background: linear-gradient(135deg,var(--bg1),var(--bg2));display:flex;align-items:center;justify-content:center;padding:24px;color:#222}
+    .wrap{width:min(900px,96%);background:var(--card);backdrop-filter: blur(8px) saturate(120%);border-radius:18px;padding:36px;box-shadow:0 18px 50px rgba(0,0,0,0.14);position:relative;overflow:hidden}
+    header{display:flex;flex-direction:column;align-items:center;text-align:center;gap:8px}
+    .title{font-family:'Playfair Display',serif;color:#fff;font-size:clamp(22px,3.5vw,34px);letter-spacing:0.6px}
+    .subtitle{color:rgba(255,255,255,0.92);font-weight:300;font-size:clamp(14px,2vw,18px)}
+    .date{color:rgba(255,255,255,0.85);font-size:13px;margin-top:4px}
+
+    .letter{
+      margin-top:20px;background:linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.02));
+      border-radius:12px;padding:22px;font-size:17px;line-height:1.6;color:#fff;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+    }
+    .letter p{margin:0 0 12px 0;font-weight:300}
+    .signature{margin-top:18px;text-align:right;font-family:'Playfair Display',serif;color:#fff;font-size:18px}
+
+    /* decorative heart */
+    .heart{
+      position:absolute;right:-40px;top:-40px;width:220px;height:220px;opacity:0.12;
+      background: radial-gradient(circle at 30% 30%, #fff, transparent 40%), linear-gradient(135deg,#fff0,#fff0);
+      filter: blur(24px);
+      transform: rotate(15deg);
+      pointer-events:none;
+    }
+
+    /* music button */
+    .controls{margin-top:18px;display:flex;gap:10px;align-items:center;justify-content:center}
+    .btn{background:rgba(255,255,255,0.95);border:none;padding:10px 14px;border-radius:10px;cursor:pointer;font-weight:600;color:var(--accent);box-shadow:0 8px 24px rgba(255,107,129,0.12)}
+    .btn-ghost{background:transparent;color:#fff;border:1px solid rgba(255,255,255,0.12)}
+
+    /* small footer */
+    .footer{margin-top:18px;text-align:center;color:rgba(255,255,255,0.9);font-size:13px}
+
+    /* entry animations */
+    .wrap { animation: appear 700ms ease both; }
+    @keyframes appear { from { transform: translateY(14px); opacity: 0 } to { transform: translateY(0); opacity: 1 } }
+
+    /* responsive */
+    @media (max-width:720px){
+      .letter{font-size:16px;padding:18px}
+      .heart{display:none}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap" role="main" aria-labelledby="page-title">
+    <div class="heart" aria-hidden></div>
+
+    <header>
+      <h1 id="page-title" class="title">To My Panget 💌</h1>
+      <div class="subtitle">A letter straight from my heart</div>
+      <div class="date">Together since December 23, 2018 💞</div>
+    </header>
+
+    <article class="letter" aria-label="Love letter">
+      <!-- Taglish sweet emotional letter -->
+      <p>Mahal ko,</p>
+
+      <p>Nung una kitang nakilala, hindi ko akalain na darating tayo sa ganitong lugar ng puso ko — na magiging tahanan mo na ako. Mula nung December 23, 2018, araw-araw kitang pinipili. Hindi dahil perpekto ka, kundi dahil sa kung sino ka kapag kasama ko: totoo, mabait, at napakabuti mo sa puso ko.</p>
+
+      <p>Minsan nahihiya akong sabihin lahat ng nararamdaman ko nang diretso, pero sana maramdaman mo pa rin kahit hindi ko lagi sinasabi. Salamat sa mga simpleng tawanan natin, sa paghawak ng kamay ko kapag natatakot, sa mga yakap na sinasabi sa akin na okay lang lahat. Ikaw yung kalmadong pangaalalay ko kapag magulo ang mundo.</p>
+
+      <p>Alam kong hindi madali lahat ng pinagdaanan natin, pero bawat pagsubok ay ginawa nating dahilan para mas tumibay ang pagmamahalan natin. Ikaw ang kanlungan ko — yung taong alam kong pwedeng umuwi ang puso ko. Kung may maling nagawa ako, patawad palagi; at kung may maganda akong naibigay, sana ramdam mo kung gaano talaga kalaki ang pagmamahal ko sayo.</p>
+
+      <p>Hindi ako perpekto, pero nangangako akong patuloy kitang mamahalin ng buong puso. Patuloy akong magbabakasakali para mapasaya ka, tutulungan kang mangarap, at ihahanda ang sarili ko na maging mas mabuting kasama para sayo. Sa lahat ng araw na dumarating, pipiliin pa rin kita — ikaw at wala nang iba.</p>
+
+      <p>Forever thankful for you — sa tawa, sa luha, sa mga plano at sa mga simpleng sandali. Salamat dahil ikaw ang “panget” ko — na nagpapakulay sa bawat araw ko.</p>
+
+      <div class="signature">Always yours,<br><strong>Micah</strong></div>
+    </article>
+
+    <div class="controls" aria-hidden="false">
+      <!-- Background music (toggle) -->
+      <button id="musicToggle" class="btn" aria-pressed="false">Play soft music 🎵</button>
+      <button id="downloadBtn" class="btn btn-ghost">Download as PNG</button>
+    </div>
+
+    <div class="footer">Share this page by uploading <code>index.html</code> to your GitHub Pages repo (for-my-love).</div>
+  </div>
+
+  <!-- gentle royalty-free-ish loop (base64 short silent placeholder). Replace src with actual audio file if you host one. -->
+  <audio id="bgMusic" loop>
+    <source src="data:audio/mpeg;base64,//uQZAAAAAAAAAAAAAAAAAAAA..." type="audio/mpeg">
+    <!-- If you want music, replace the source with a real mp3 hosted on your repo (example: music.mp3) -->
+  </audio>
+
+  <script>
+    // Music toggle logic (will only work if you put a real src for the audio)
+    const musicToggle = document.getElementById('musicToggle');
+    const bg = document.getElementById('bgMusic');
+
+    musicToggle.addEventListener('click', () => {
+      if (bg.paused) {
+        bg.play().catch(()=>{/* autoplay may be blocked — user can click again */});
+        musicToggle.textContent = 'Pause music ⏸️';
+        musicToggle.setAttribute('aria-pressed','true');
+      } else {
+        bg.pause();
+        musicToggle.textContent = 'Play soft music 🎵';
+        musicToggle.setAttribute('aria-pressed','false');
+      }
+    });
+
+    // Simple download snapshot of the letter (uses html2canvas approach replacement using canvas drawing)
+    // Note: To keep code self-contained and small, this uses an approach that captures the letter element as SVG.
+    document.getElementById('downloadBtn').addEventListener('click', async () => {
+      const el = document.querySelector('.wrap');
+      const svg = `
+        <svg xmlns='http://www.w3.org/2000/svg' width='1200' height='800'>
+          <foreignObject width='100%' height='100%'>
+            ${new XMLSerializer().serializeToString(el)}
+          </foreignObject>
+        </svg>`;
+      const blob = new Blob([svg], {type:'image/svg+xml;charset=utf-8'});
+      const url = URL.createObjectURL(blob);
+      const img = new Image();
+      img.onload = () => {
+        const canvas = document.createElement('canvas');
+        const scale = Math.min(2, window.devicePixelRatio || 1);
+        canvas.width = img.width * scale;
+        canvas.height = img.height * scale;
+        const ctx = canvas.getContext('2d');
+        ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+        URL.revokeObjectURL(url);
+        const a = document.createElement('a');
+        a.download = 'love_letter_for_panget.png';
+        a.href = canvas.toDataURL('image/png');
+        a.click();
+      };
+      img.onerror = () => {
+        alert('Sorry — image export not supported in this browser. You can still screenshot the page.');
+      };
+      img.src = url;
+    });
+
+    // Accessibility: focus the title on load
+    window.addEventListener('load', () => {
+      const title = document.getElementById('page-title');
+      if (title) title.focus?.();
+    });
+  </script>
+</body>
+</html>
